@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid should render  1`] = `
+<div>
+  <div
+    class="ms-Grid"
+    dir="ltr"
+  >
+    <div
+      class="ms-Grid-row"
+    >
+      <div
+        class="ms-Grid-col"
+      />
+      <div
+        class="ms-Grid-col"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid should render 1`] = `
+<div>
+  <div
+    class="ms-Grid"
+    dir="ltr"
+  >
+    <div
+      class="ms-Grid-row"
+    >
+      <div
+        class="ms-Grid-col"
+      />
+      <div
+        class="ms-Grid-col"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid should render 2`] = `
+<div>
+  <div
+    class="ms-Grid"
+    dir="ltr"
+  >
+    <div
+      class="ms-Grid-row"
+    >
+      <div
+        class="ms-Grid-col"
+      />
+      <div
+        class="ms-Grid-col"
+      />
+    </div>
+  </div>
+</div>
+`;

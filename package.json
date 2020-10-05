@@ -1,7 +1,7 @@
 {
   "name": "fluentui-react-grid",
   "version": "0.0.0",
-  "description": "",
+  "description": "React components for Fluent UI layout styles",
   "author": "Jakub Biesiada",
   "license": "MIT",
   "main": "lib/fluentui-react-grid.cjs.js",
@@ -26,7 +26,17 @@
     "type": "git",
     "url": "https://github.com/JB1905/fluentui-react-grid.git"
   },
-  "keywords": [],
+  "keywords": [
+    "grid",
+    "row",
+    "col",
+    "react",
+    "components",
+    "fluent",
+    "microsoft",
+    "styles",
+    "layout"
+  ],
   "bugs": {
     "url": "https://github.com/JB1905/fluentui-react-grid/issues"
   },
@@ -42,6 +52,7 @@
     "@storybook/react": "^6.0.22",
     "@storybook/storybook-deployer": "^2.8.6",
     "@testing-library/react": "^11.0.4",
+    "@types/classnames": "^2.2.10",
     "@types/jest": "^26.0.14",
     "@types/react": "^16.9.49",
     "@typescript-eslint/parser": "^4.2.0",
