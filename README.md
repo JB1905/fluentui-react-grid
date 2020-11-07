@@ -9,11 +9,25 @@
 
 ## About
 
+React components for Fluent UI layout styles
+
 ### Alternatives
+
+- [Fluent UI styles](https://developer.microsoft.com/en-us/fluentui#/styles/web/layout)
 
 ## Contents
 
+- [Demo](#demo)
+- [How to Install](#how-to-install)
+- [Components](#components)
+  - [Grid](#grid)
+  - [Row](#row)
+  - [Col](#col)
+- [Example](#example)
+
 ## Demo
+
+[**Playground – play with library in Storybook**](https://jb1905.github.com/fluentui-react-grid/)
 
 ## How to Install
 
@@ -29,15 +43,79 @@ Or Yarn:
 $ yarn add fluentui-react-grid
 ```
 
+You also need to add CSS styles:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"
+/>
+```
+
 ## Components
 
 ### Grid
 
+#### Available options
+
+HTML div element props
+
 ### Row
+
+#### Available options
+
+HTML div element props
 
 ### Col
 
+#### Available options
+
+HTML div element props and dedicated params based on Fluent UI class names
+
+| Param           | Type    | Description |
+| --------------- | ------- | ----------- |
+| `sizeSm`        | number  |             |
+| `sizeMd`        | number  |             |
+| `sizeLg`        | number  |             |
+| `sizeXl`        | number  |             |
+| `sizeXxl`       | number  |             |
+| `sizeXxxl`      | number  |             |
+| `smPush`        | number  |             |
+| `mdPush`        | number  |             |
+| `lgPush`        | number  |             |
+| `xlPush`        | number  |             |
+| `xxlPush`       | number  |             |
+| `xxxlPush`      | number  |             |
+| `smPull`        | number  |             |
+| `mdPull`        | number  |             |
+| `lgPull`        | number  |             |
+| `xlPull`        | number  |             |
+| `xxlPull`       | number  |             |
+| `xxxlPull`      | number  |             |
+| `hiddenSm`      | boolean |             |
+| `hiddenMd`      | boolean |             |
+| `hiddenMdDown`  | boolean |             |
+| `hiddenMdUp`    | boolean |             |
+| `hiddenLg`      | boolean |             |
+| `hiddenLgDown`  | boolean |             |
+| `hiddenLgUp`    | boolean |             |
+| `hiddenXl`      | boolean |             |
+| `hiddenXlDown`  | boolean |             |
+| `hiddenXlUp`    | boolean |             |
+| `hiddenXxl`     | boolean |             |
+| `hiddenXxlDown` | boolean |             |
+| `hiddenXxlUp`   | boolean |             |
+| `hiddenXxxl`    | boolean |             |
+
 ## Example
+
+```tsx
+<Grid>
+  <Row>
+    <Col></Col>
+  </Row>
+</Grid>
+```
 
 ## License
 
