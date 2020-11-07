@@ -20,14 +20,12 @@ export const parameters = {
 addDecorator((Story) => (
   <div
     style={{
-      // width: '100%',
       width: '100vw',
       minHeight: '100vh',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      // padding: '1rem',
       textAlign: 'center'
     }}
   >

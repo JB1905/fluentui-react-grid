@@ -2,7 +2,6 @@ import React, { HTMLProps } from 'react';
 import cn from 'classnames';
 
 type Size =
-  // | 0
   | 1
   | 2
   | 3
@@ -15,7 +14,6 @@ type Size =
   | 10
   | 11
   | 12
-  // | '0'
   | '1'
   | '2'
   | '3'
@@ -29,7 +27,6 @@ type Size =
   | '11'
   | '12';
 
-// number | string // 0-12
 export interface Props extends HTMLProps<HTMLDivElement> {
   readonly sizeSm?: Size;
   readonly sizeMd?: Size;
