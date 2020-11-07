@@ -4,12 +4,12 @@ import { render } from '@testing-library/react';
 import { Grid, Row, Col } from '../src';
 
 describe('Grid', () => {
-  it('should render ', () => {
+  it('should render grid without params', () => {
     const { container } = render(
       <Grid>
         <Row>
-          <Col></Col>
-          <Col></Col>
+          <Col>Hello</Col>
+          <Col>World</Col>
         </Row>
       </Grid>
     );
@@ -17,39 +17,26 @@ describe('Grid', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render', () => {
-    const { container } = render(
-      <Grid>
-        <Row>
-          <Col></Col>
-          <Col></Col>
-        </Row>
-      </Grid>
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render', () => {
+  it('should render grid with custom params', () => {
     const { container } = render(
       <Grid>
         <Grid.Row>
+          <Grid.Col>Hello</Grid.Col>
+
           <Grid.Col
+            className="custom-class-name"
             sizeSm={12}
             sizeMd={8}
             sizeLg={6}
             sizeXl={4}
             sizeXxl={3}
             sizeXxxl={2}
-          ></Grid.Col>
-
-          <Grid.Col
-            className="apple"
             hiddenSm
             hiddenMd
             hiddenLg
             hiddenXl
             hiddenXxl
+            hiddenXxxl
             smPush={2}
             smPull={2}
             mdPush={2}
@@ -62,8 +49,16 @@ describe('Grid', () => {
             xxlPull={2}
             xxxlPush={2}
             xxxlPull={2}
+            hiddenMdDown
+            hiddenMdUp
+            hiddenLgDown
+            hiddenLgUp
+            hiddenXlDown
+            hiddenXlUp
+            hiddenXxlDown
+            hiddenXxlUp
           >
-            Hello
+            World!
           </Grid.Col>
         </Grid.Row>
       </Grid>

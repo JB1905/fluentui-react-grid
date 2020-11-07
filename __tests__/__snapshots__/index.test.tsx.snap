@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grid should render  1`] = `
+exports[`Grid should render grid with custom params 1`] = `
 <div>
   <div
     class="ms-Grid"
@@ -11,16 +11,20 @@ exports[`Grid should render  1`] = `
     >
       <div
         class="ms-Grid-col"
-      />
+      >
+        Hello
+      </div>
       <div
-        class="ms-Grid-col"
-      />
+        class="ms-Grid-col ms-sm12 ms-md8 ms-lg6 ms-xl4 ms-xxl3 ms-xxl2 ms-sm2 ms-md2 ms-lg2 ms-xl2 ms-xxl2 ms-xxl2 ms-sm2 ms-md2 ms-lg2 ms-xl2 ms-xxl2 ms-xxl2 ms-hiddenSm ms-hiddenMd ms-hiddenMdDown ms-hiddenMdUp ms-hiddenLg ms-hiddenLgDown ms-hiddenLgUp ms-hiddenXl ms-hiddenXlDown ms-hiddenXlUp ms-hiddenXxl ms-hiddenXxlDown ms-hiddenXxlUp ms-hiddenXxxl custom-class-name"
+      >
+        World!
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Grid should render 1`] = `
+exports[`Grid should render grid without params 1`] = `
 <div>
   <div
     class="ms-Grid"
@@ -31,30 +35,14 @@ exports[`Grid should render 1`] = `
     >
       <div
         class="ms-Grid-col"
-      />
+      >
+        Hello
+      </div>
       <div
         class="ms-Grid-col"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Grid should render 2`] = `
-<div>
-  <div
-    class="ms-Grid"
-    dir="ltr"
-  >
-    <div
-      class="ms-Grid-row"
-    >
-      <div
-        class="ms-Grid-col"
-      />
-      <div
-        class="ms-Grid-col"
-      />
+      >
+        World
+      </div>
     </div>
   </div>
 </div>
