@@ -1,12 +1,15 @@
 import React, { HTMLProps } from 'react';
 import cn from 'classnames';
 
-import { Row } from './Row';
-import { Col } from './Col';
+import { Row, RowProps } from './Row';
+import { Col, ColProps } from './Col';
 
-interface Props extends HTMLProps<HTMLDivElement> {}
+interface GridProps extends HTMLProps<HTMLDivElement> {}
 
-export const Grid = ({ children, className, ...props }: Props) => (
+export const Grid: React.FC<GridProps> & {
+  Row: React.FC<RowProps>;
+  Col: React.FC<ColProps>;
+} = ({ children, className, ...props }) => (
   <div {...props} className={cn('ms-Grid', className)} dir="ltr">
     {children}
   </div>

@@ -1,7 +1,7 @@
 import React, { HTMLProps } from 'react';
 import cn from 'classnames';
 
-interface Props extends HTMLProps<HTMLDivElement> {
+export interface ColProps extends HTMLProps<HTMLDivElement> {
   readonly sizeSm?: number;
   readonly sizeMd?: number;
   readonly sizeLg?: number;
@@ -79,7 +79,7 @@ export const Col = ({
   hiddenXxlUp,
   hiddenXxxl,
   ...props
-}: Props) => (
+}: ColProps) => (
   <div
     {...props}
     className={cn(
