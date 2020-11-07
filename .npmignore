@@ -3,16 +3,13 @@ stories
 storybook-static
 .storybook
 __tests__
-__mocks__
 coverage
-patches
 
 tsconfig.json
 .travis.yml
 .prettierrc
 
 .eslintrc.js
-global.d.ts
 rollup.config.js
 yarn-error.log
 .rpt2_cache
