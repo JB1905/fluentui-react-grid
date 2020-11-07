@@ -1,27 +1,56 @@
 import React, { HTMLProps } from 'react';
 import cn from 'classnames';
 
+type Size =
+  // | 0
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | 12
+  // | '0'
+  | '1'
+  | '2'
+  | '3'
+  | '4'
+  | '5'
+  | '6'
+  | '7'
+  | '8'
+  | '9'
+  | '10'
+  | '11'
+  | '12';
+
+// number | string // 0-12
 export interface Props extends HTMLProps<HTMLDivElement> {
-  readonly sizeSm?: number;
-  readonly sizeMd?: number;
-  readonly sizeLg?: number;
-  readonly sizeXl?: number;
-  readonly sizeXxl?: number;
-  readonly sizeXxxl?: number;
+  readonly sizeSm?: Size;
+  readonly sizeMd?: Size;
+  readonly sizeLg?: Size;
+  readonly sizeXl?: Size;
+  readonly sizeXxl?: Size;
+  readonly sizeXxxl?: Size;
 
-  readonly smPush?: number;
-  readonly mdPush?: number;
-  readonly lgPush?: number;
-  readonly xlPush?: number;
-  readonly xxlPush?: number;
-  readonly xxxlPush?: number;
+  readonly smPush?: Size;
+  readonly mdPush?: Size;
+  readonly lgPush?: Size;
+  readonly xlPush?: Size;
+  readonly xxlPush?: Size;
+  readonly xxxlPush?: Size;
 
-  readonly smPull?: number;
-  readonly mdPull?: number;
-  readonly lgPull?: number;
-  readonly xlPull?: number;
-  readonly xxlPull?: number;
-  readonly xxxlPull?: number;
+  readonly smPull?: Size;
+  readonly mdPull?: Size;
+  readonly lgPull?: Size;
+  readonly xlPull?: Size;
+  readonly xxlPull?: Size;
+  readonly xxxlPull?: Size;
 
   readonly hiddenSm?: boolean;
   readonly hiddenMd?: boolean;
@@ -78,6 +107,7 @@ export const Col = ({
   hiddenXxlDown,
   hiddenXxlUp,
   hiddenXxxl,
+
   ...props
 }: Props) => (
   <div

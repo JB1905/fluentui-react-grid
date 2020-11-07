@@ -109,17 +109,63 @@ HTML div element props and dedicated params based on Fluent UI class names
 
 ## Example
 
-```tsx
-<Grid>
-  <Row>
-    <Col sizeSm={6} sizeMd={4} sizeLg={2}>1.1 Content</Col>
-    <Col sizeSm={6} sizeMd={8} sizeLg={10}>1.2 Content</Col>
-  </Row>
+Basics:
 
-  <Row>
-    <Col sizeSm={4} smPush={8}>2.1 Content</Col>
-    <Col sizeSm={8} smPull={4}>2.2 Content</Col>
-  </Row>
+```jsx
+<Grid>
+  <Grid.Row>
+    <Grid.Col sizeSm={6} sizeMd={4} sizeLg={2}>
+      A
+    </Grid.Col>
+
+    <Grid.Col sizeSm={6} sizeMd={6} sizeLg={10}>
+      B
+    </Grid.Col>
+  </Grid.Row>
+</Grid>
+```
+
+Inheritance:
+
+```jsx
+<Grid>
+  <Grid.Row>
+    <Grid.Col sizeSm={12} sizeLg={4}>
+      Example
+    </Grid.Col>
+  </Grid.Row>
+</Grid>
+```
+
+Push and Pull:
+
+```jsx
+<Grid>
+  <Grid.Row>
+    <Grid.Col sizeSm={4} smPush={8}>
+      First in code
+    </Grid.Col>
+
+    <Grid.Col sizeSm={8} smPull={4}>
+      Second in code
+    </Grid.Col>
+  </Grid.Row>
+</Grid>
+```
+
+Visibility:
+
+```jsx
+<Grid>
+  <Grid.Row>
+    <Grid.Col sizeSm={12} hiddenXxlUp>
+      Visible on smaller screens
+    </Grid.Col>
+
+    <Grid.Col sizeSm="12" hiddenXlDown>
+      Visible on larger screens
+    </Grid.Col>
+  </Grid.Row>
 </Grid>
 ```
 

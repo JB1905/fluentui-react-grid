@@ -1,10 +1,16 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
+import { MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
 
 export const parameters = {
   previewTabs: {
     'storybook/docs/panel': {
       hidden: true,
+    },
+  },
+  viewport: {
+    viewports: {
+       ...MINIMAL_VIEWPORTS,
     },
   },
   docs: { page: null },
@@ -14,13 +20,15 @@ export const parameters = {
 addDecorator((Story) => (
   <div
     style={{
-      maxWidth: 300,
+      // width: '100%',
+      width: '100vw',
       minHeight: '100vh',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '1rem',
+      // padding: '1rem',
+      textAlign: 'center'
     }}
   >
     <Story />
