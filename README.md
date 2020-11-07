@@ -109,7 +109,7 @@ HTML div element props and dedicated params based on Fluent UI class names
 
 ## Example
 
-Basics:
+### Basics
 
 ```jsx
 <Grid>
@@ -125,7 +125,7 @@ Basics:
 </Grid>
 ```
 
-Inheritance:
+### Inheritance
 
 ```jsx
 <Grid>
@@ -137,7 +137,7 @@ Inheritance:
 </Grid>
 ```
 
-Push and Pull:
+### Push and Pull
 
 ```jsx
 <Grid>
@@ -153,7 +153,7 @@ Push and Pull:
 </Grid>
 ```
 
-Visibility:
+### Visibility
 
 ```jsx
 <Grid>
@@ -162,7 +162,7 @@ Visibility:
       Visible on smaller screens
     </Grid.Col>
 
-    <Grid.Col sizeSm="12" hiddenXlDown>
+    <Grid.Col sizeSm={12} hiddenXlDown>
       Visible on larger screens
     </Grid.Col>
   </Grid.Row>
