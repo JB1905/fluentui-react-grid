@@ -15,9 +15,9 @@ exports[`Grid should render grid with custom params 1`] = `
         Hello
       </div>
       <div
-        class="ms-Grid-col ms-sm12 ms-md8 ms-lg6 ms-xl4 ms-xxl3 ms-xxl2 ms-sm2 ms-md2 ms-lg2 ms-xl2 ms-xxl2 ms-xxl2 ms-sm2 ms-md2 ms-lg2 ms-xl2 ms-xxl2 ms-xxl2 ms-hiddenSm ms-hiddenMd ms-hiddenMdDown ms-hiddenMdUp ms-hiddenLg ms-hiddenLgDown ms-hiddenLgUp ms-hiddenXl ms-hiddenXlDown ms-hiddenXlUp ms-hiddenXxl ms-hiddenXxlDown ms-hiddenXxlUp ms-hiddenXxxl custom-class-name"
+        class="ms-Grid-col ms-sm12 ms-md8 ms-lg6 ms-xl4 ms-xxl3 ms-xxl2 ms-sm1 ms-md3 ms-lg5 ms-xl7 ms-xxl9 ms-xxl11 ms-sm2 ms-md4 ms-lg6 ms-xl8 ms-xxl10 ms-xxl12 ms-hiddenSm ms-hiddenMd ms-hiddenMdDown ms-hiddenMdUp ms-hiddenLg ms-hiddenLgDown ms-hiddenLgUp ms-hiddenXl ms-hiddenXlDown ms-hiddenXlUp ms-hiddenXxl ms-hiddenXxlDown ms-hiddenXxlUp ms-hiddenXxxl custom-class-name"
       >
-        World!
+        World
       </div>
     </div>
   </div>

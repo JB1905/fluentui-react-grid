@@ -37,18 +37,18 @@ describe('Grid', () => {
             hiddenXl
             hiddenXxl
             hiddenXxxl
-            smPush={2}
+            smPush={1}
             smPull={2}
-            mdPush={2}
-            mdPull={2}
-            lgPush={2}
-            lgPull={2}
-            xlPush={2}
-            xlPull={2}
-            xxlPush={2}
-            xxlPull={2}
-            xxxlPush={2}
-            xxxlPull={2}
+            mdPush={3}
+            mdPull={4}
+            lgPush={5}
+            lgPull={6}
+            xlPush={7}
+            xlPull={8}
+            xxlPush={9}
+            xxlPull={10}
+            xxxlPush={11}
+            xxxlPull={12}
             hiddenMdDown
             hiddenMdUp
             hiddenLgDown
@@ -58,7 +58,7 @@ describe('Grid', () => {
             hiddenXxlDown
             hiddenXxlUp
           >
-            World!
+            World
           </Grid.Col>
         </Grid.Row>
       </Grid>
