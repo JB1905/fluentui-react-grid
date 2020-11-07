@@ -1,4 +1,4 @@
-# [fluentui-react-grid](https://github.com/JB1905/fluentui-react-grid)
+# [fluentui-react-grid](https://github.com/JB1905/fluentui-react-grid) (WIP)
 
 [![NPM version](http://img.shields.io/npm/v/fluentui-react-grid?style=flat-square)](https://www.npmjs.com/package/fluentui-react-grid)
 [![NPM downloads](http://img.shields.io/npm/dm/fluentui-react-grid?style=flat-square)](https://www.npmjs.com/package/fluentui-react-grid)
@@ -112,7 +112,13 @@ HTML div element props and dedicated params based on Fluent UI class names
 ```tsx
 <Grid>
   <Row>
-    <Col></Col>
+    <Col sizeSm={6} sizeMd={4} sizeLg={2}>1.1 Content</Col>
+    <Col sizeSm={6} sizeMd={8} sizeLg={10}>1.2 Content</Col>
+  </Row>
+
+  <Row>
+    <Col sizeSm={4} smPush={8}>2.1 Content</Col>
+    <Col sizeSm={8} smPull={4}>2.2 Content</Col>
   </Row>
 </Grid>
 ```
