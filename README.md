@@ -1,4 +1,4 @@
-# [fluentui-react-grid](https://github.com/JB1905/fluentui-react-grid) (WIP)
+# [fluentui-react-grid](https://github.com/JB1905/fluentui-react-grid)
 
 [![NPM version](https://img.shields.io/npm/v/fluentui-react-grid?style=flat-square)](https://www.npmjs.com/package/fluentui-react-grid)
 [![NPM downloads](https://img.shields.io/npm/dm/fluentui-react-grid?style=flat-square)](https://www.npmjs.com/package/fluentui-react-grid)
@@ -27,7 +27,7 @@ React components for Fluent UI layout styles
 
 ## Demo
 
-[**Playground – play with library in Storybook**](https://jb1905.github.com/fluentui-react-grid/)
+[**Playground – play with library in Storybook**](https://jb1905.github.io/fluentui-react-grid/)
 
 ## How to Install
 
@@ -71,6 +71,8 @@ HTML div element props
 #### Available options
 
 HTML div element props and dedicated params based on Fluent UI class names
+
+<!-- TODO update options -->
 
 | Param           | Type    | Description |
 | --------------- | ------- | ----------- |
@@ -137,7 +139,7 @@ HTML div element props and dedicated params based on Fluent UI class names
 </Grid>
 ```
 
-### Push and Pull
+### Push and pull
 
 ```jsx
 <Grid>
