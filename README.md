@@ -43,7 +43,7 @@ Or Yarn:
 $ yarn add fluentui-react-grid
 ```
 
-You also need to add CSS styles:
+You also need to include CSS styles (in HTML head section e.g.: in index.html file):
 
 ```html
 <link
