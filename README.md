@@ -72,6 +72,8 @@ HTML div element props
 
 HTML div element props and dedicated params based on Fluent UI class names
 
+[Check corresponding Fulent UI class names here](https://developer.microsoft.com/en-us/fluentui#/styles/web/layout)
+
 | Param           | Type                            |
 | --------------- | ------------------------------- |
 | `sizeSm`        | number or string (between 1-12) |
