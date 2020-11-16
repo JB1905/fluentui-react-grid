@@ -60,6 +60,8 @@ You also need to include CSS styles (in HTML head section e.g.: in index.html fi
 
 HTML div element props
 
+**You need to add `dir="ltr"` – (order from left to right) or `dir="rtl"` – (right to left/reversed order) for correct grid positioning**
+
 ### Row
 
 #### Available options
@@ -114,7 +116,7 @@ HTML div element props and dedicated params based on Fluent UI class names
 ### Basics
 
 ```jsx
-<Grid>
+<Grid dir="ltr">
   <Grid.Row>
     <Grid.Col sizeSm={6} sizeMd={4} sizeLg={2}>
       A
@@ -130,7 +132,7 @@ HTML div element props and dedicated params based on Fluent UI class names
 ### Inheritance
 
 ```jsx
-<Grid>
+<Grid dir="ltr">
   <Grid.Row>
     <Grid.Col sizeSm={12} sizeLg={4}>
       Example
@@ -142,7 +144,7 @@ HTML div element props and dedicated params based on Fluent UI class names
 ### Push and pull
 
 ```jsx
-<Grid>
+<Grid dir="ltr">
   <Grid.Row>
     <Grid.Col sizeSm={4} smPush={8}>
       First in code
@@ -158,7 +160,7 @@ HTML div element props and dedicated params based on Fluent UI class names
 ### Visibility
 
 ```jsx
-<Grid>
+<Grid dir="ltr">
   <Grid.Row>
     <Grid.Col sizeSm={12} hiddenXxlUp>
       Visible on smaller screens
