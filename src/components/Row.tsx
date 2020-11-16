@@ -4,7 +4,7 @@ import cn from 'classnames';
 export interface Props extends HTMLProps<HTMLDivElement> {}
 
 export const Row = ({ children, className, ...props }: Props) => (
-  <div {...props} className={cn('ms-Grid-row', className)}>
+  <div className={cn('ms-Grid-row', className)} {...props}>
     {children}
   </div>
 );

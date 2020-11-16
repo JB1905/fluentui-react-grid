@@ -108,7 +108,6 @@ export const Col = ({
   ...props
 }: Props) => (
   <div
-    {...props}
     className={cn(
       'ms-Grid-col',
 
@@ -150,6 +149,7 @@ export const Col = ({
 
       className
     )}
+    {...props}
   >
     {children}
   </div>
