@@ -19,6 +19,7 @@ export const parameters = {
 
 addDecorator((Story) => (
   <div
+    dir="ltr"
     style={{
       width: '100vw',
       minHeight: '100vh',

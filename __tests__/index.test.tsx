@@ -3,10 +3,12 @@ import { render } from '@testing-library/react';
 
 import { Grid, Row, Col } from '../src';
 
+// TODO update
+
 describe('Grid', () => {
   it('should render grid without params', () => {
     const { container } = render(
-      <Grid>
+      <Grid dir="ltr">
         <Row>
           <Col>Hello</Col>
           <Col>World</Col>
@@ -19,7 +21,7 @@ describe('Grid', () => {
 
   it('should render grid with custom params', () => {
     const { container } = render(
-      <Grid>
+      <Grid dir="ltr">
         <Grid.Row>
           <Grid.Col>Hello</Grid.Col>
 
