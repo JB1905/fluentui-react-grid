@@ -60,7 +60,7 @@ You also need to include CSS styles (in HTML head section e.g.: in index.html fi
 
 HTML div element props
 
-**You need to add `dir="ltr"` – (order from left to right) or `dir="rtl"` – (right to left/reversed order) for correct grid positioning**
+*You need to add `dir="ltr"` – (order from left to right) or `dir="rtl"` – (right to left/reversed order) for correct grid positioning*
 
 ### Row
 
