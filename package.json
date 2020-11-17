@@ -1,6 +1,6 @@
 {
   "name": "fluentui-react-grid",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "React components for Fluent UI layout styles",
   "author": "Jakub Biesiada",
   "license": "MIT",
@@ -56,7 +56,7 @@
     "@types/classnames": "^2.2.11",
     "@types/jest": "^26.0.15",
     "@types/react": "^16.9.56",
-    "@typescript-eslint/parser": "^4.7.0",
+    "@typescript-eslint/parser": "^4.8.1",
     "babel-loader": "^8.2.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.13.0",
@@ -73,7 +73,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.29.0",
-    "semantic-release": "^17.2.2",
+    "semantic-release": "^17.2.3",
     "ts-jest": "^26.4.4",
     "ts-loader": "^8.0.11",
     "typescript": "^4.0.5"
