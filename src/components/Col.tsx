@@ -27,7 +27,7 @@ type Size =
   | '11'
   | '12';
 
-export interface ColProps extends HTMLProps<HTMLDivElement> {
+export interface Props extends HTMLProps<HTMLDivElement> {
   readonly sizeSm?: Size;
   readonly sizeMd?: Size;
   readonly sizeLg?: Size;
@@ -106,7 +106,7 @@ export const Col = ({
   hiddenXxxl,
 
   ...props
-}: ColProps) => (
+}: Props) => (
   <div
     className={cn(
       'ms-Grid-col',
