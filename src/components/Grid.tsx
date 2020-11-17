@@ -4,9 +4,11 @@ import cn from 'classnames';
 import { Row } from './Row';
 import { Col } from './Col';
 
-interface Props extends HTMLProps<HTMLDivElement> {}
-
-export const Grid = ({ children, className, ...props }: Props) => (
+export const Grid = ({
+  children,
+  className,
+  ...props
+}: HTMLProps<HTMLDivElement>) => (
   <div className={cn('ms-Grid', className)} {...props}>
     {children}
   </div>
