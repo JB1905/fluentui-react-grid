@@ -58,21 +58,21 @@ You also need to include CSS styles (in HTML head section e.g.: in index.html fi
 
 #### Available options
 
-HTML div element props
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
 
-_You need to add `dir="ltr"` – (order from left to right) or `dir="rtl"` – (right to left/reversed order) for correct grid positioning_
+_You need to specify grid order for correct positioning. Add `dir="ltr"` – (order from left to right) or `dir="rtl"` – (right to left/reversed order)_
 
 ### Row
 
 #### Available options
 
-HTML div element props
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
 
 ### Col
 
 #### Available options
 
-HTML div element props and dedicated params based on Fluent UI class names
+[HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) and dedicated params based on Fluent UI class names
 
 [Check corresponding Fulent UI class names here](https://developer.microsoft.com/en-us/fluentui#/styles/web/layout)
 
