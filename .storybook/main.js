@@ -4,6 +4,7 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/theming',
     '@storybook/addon-viewport',
+    '@storybook/addon-controls',
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({

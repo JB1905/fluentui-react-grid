@@ -4,9 +4,26 @@ import { styled } from '@storybook/theming';
 
 import { Grid } from '../src';
 
+type Dir = 'ltr' | 'rtl';
+
+interface Props {
+  readonly dir: Dir;
+}
+
 export default {
   title: 'Grid',
   component: Grid,
+  argTypes: {
+    dir: {
+      control: {
+        type: 'inline-radio',
+        options: ['ltr', 'rtl'],
+      },
+    },
+  },
+  args: {
+    dir: 'ltr',
+  },
 } as Meta;
 
 const style = { width: '100%' };
@@ -21,8 +38,8 @@ const DemoBlock = styled.div`
   text-align: center;
 `;
 
-export const basics: Story = () => (
-  <Grid style={style}>
+export const Basics: Story<Props> = ({ dir }) => (
+  <Grid style={style} dir={dir}>
     <Grid.Row>
       <Grid.Col sizeSm="6" sizeMd={4} sizeLg={2}>
         <DemoBlock>A</DemoBlock>
@@ -35,8 +52,8 @@ export const basics: Story = () => (
   </Grid>
 );
 
-export const inheritance: Story = () => (
-  <Grid style={style}>
+export const Inheritance: Story<Props> = ({ dir }) => (
+  <Grid style={style} dir={dir}>
     <Grid.Row>
       <Grid.Col sizeSm={12} sizeLg="4">
         <DemoBlock>Example</DemoBlock>
@@ -45,8 +62,8 @@ export const inheritance: Story = () => (
   </Grid>
 );
 
-export const pushAndPull: Story = () => (
-  <Grid style={style}>
+export const PushAndPull: Story<Props> = ({ dir }) => (
+  <Grid style={style} dir={dir}>
     <Grid.Row>
       <Grid.Col sizeSm={4} smPush="8">
         <DemoBlock>First in code</DemoBlock>
@@ -59,10 +76,10 @@ export const pushAndPull: Story = () => (
   </Grid>
 );
 
-pushAndPull.storyName = 'Push and pull';
+PushAndPull.storyName = 'Push and pull';
 
-export const visibility: Story = () => (
-  <Grid style={style}>
+export const Visibility: Story<Props> = () => (
+  <Grid style={style} dir="ltr">
     <Grid.Row>
       <Grid.Col sizeSm={12} hiddenXxlUp>
         <DemoBlock>Visible on smaller screens</DemoBlock>
@@ -74,3 +91,9 @@ export const visibility: Story = () => (
     </Grid.Row>
   </Grid>
 );
+
+Visibility.parameters = {
+  controls: {
+    disabled: true,
+  },
+};

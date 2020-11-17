@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^10.0.0",
+    "@storybook/addon-controls": "^6.0.28",
     "@storybook/addon-docs": "^6.0.28",
     "@storybook/addon-viewport": "^6.0.28",
     "@storybook/addons": "^6.0.28",
