@@ -7,7 +7,7 @@ import { Col } from './Col';
 interface Props extends HTMLProps<HTMLDivElement> {}
 
 export const Grid = ({ children, className, ...props }: Props) => (
-  <div {...props} className={cn('ms-Grid', className)}>
+  <div className={cn('ms-Grid', className)} {...props}>
     {children}
   </div>
 );
