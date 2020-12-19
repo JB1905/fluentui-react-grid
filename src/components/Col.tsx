@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import cn from 'classnames';
+import clsx from 'clsx';
 
 type Size =
   | 1
@@ -108,7 +108,7 @@ export const Col = ({
   ...props
 }: Props) => (
   <div
-    className={cn(
+    className={clsx(
       'ms-Grid-col',
 
       sizeSm && `ms-sm${sizeSm}`,
