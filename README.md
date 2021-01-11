@@ -56,7 +56,7 @@ You also need to include CSS styles (in HTML head section e.g.: in index.html fi
 
 **Import `Grid` and use as Compound Component:**
 
-```js
+```jsx
 import { Grid } from 'fluentui-react-grid';
 
 ...
@@ -74,7 +74,7 @@ import { Grid } from 'fluentui-react-grid';
 
 **Or import all components:**
 
-```js
+```jsx
 import { Grid, Row, Col } from 'fluentui-react-grid';
 
 ...
@@ -214,14 +214,14 @@ _You need to specify grid order for correct positioning. Add `dir="ltr"` – (or
 ### Without Compound Components
 
 ```jsx
-<Grid dir="ltr">
+<Grid style={style} dir="ltr">
   <Row>
-    <Col sizeSm={12} hiddenXxlUp>
-      Visible on smaller screens
+    <Col sizeSm="6" sizeMd={4} sizeLg={2}>
+      <DemoBlock>A</DemoBlock>
     </Col>
 
-    <Col sizeSm={12} hiddenXlDown>
-      Visible on larger screens
+    <Col sizeSm={6} sizeMd="8" sizeLg={10}>
+      <DemoBlock>B</DemoBlock>
     </Col>
   </Row>
 </Grid>
