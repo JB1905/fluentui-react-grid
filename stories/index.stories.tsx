@@ -98,7 +98,6 @@ Visibility.parameters = {
   },
 };
 
-
 export const WithoutCompoundComponents: Story<Props> = () => (
   <Grid style={style} dir="ltr">
     <Row>
