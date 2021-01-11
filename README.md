@@ -54,7 +54,7 @@ You also need to include CSS styles (in HTML head section e.g.: in index.html fi
 
 ## Getting Started
 
-**Import `Grid` and use as Compound Component:
+**Import `Grid` and use as Compound Component:**
 
 ```js
 import { Grid } from 'fluentui-react-grid';
