@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { styled } from '@storybook/theming';
 
-import { Grid } from '../src';
+import { Grid, Row, Col } from '../src';
 
 type Dir = 'ltr' | 'rtl';
 
@@ -93,6 +93,27 @@ export const Visibility: Story<Props> = () => (
 );
 
 Visibility.parameters = {
+  controls: {
+    disabled: true,
+  },
+};
+
+
+export const WithoutCompoundComponents: Story<Props> = () => (
+  <Grid style={style} dir="ltr">
+    <Row>
+      <Col sizeSm="6" sizeMd={4} sizeLg={2}>
+        <DemoBlock>A</DemoBlock>
+      </Col>
+
+      <Col sizeSm={6} sizeMd="8" sizeLg={10}>
+        <DemoBlock>B</DemoBlock>
+      </Col>
+    </Row>
+  </Grid>
+);
+
+WithoutCompoundComponents.parameters = {
   controls: {
     disabled: true,
   },
