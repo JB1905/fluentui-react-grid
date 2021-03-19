@@ -1,31 +1,9 @@
 import React, { HTMLProps } from 'react';
 import clsx from 'clsx';
 
-type Size =
-  | 1
-  | 2
-  | 3
-  | 4
-  | 5
-  | 6
-  | 7
-  | 8
-  | 9
-  | 10
-  | 11
-  | 12
-  | '1'
-  | '2'
-  | '3'
-  | '4'
-  | '5'
-  | '6'
-  | '7'
-  | '8'
-  | '9'
-  | '10'
-  | '11'
-  | '12';
+type NumericSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+
+type Size = NumericSize | `${NumericSize}`;
 
 export interface Props extends HTMLProps<HTMLDivElement> {
   readonly sizeSm?: Size;

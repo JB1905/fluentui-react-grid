@@ -78,7 +78,7 @@ export const PushAndPull: Story<Props> = ({ dir }) => (
 
 PushAndPull.storyName = 'Push and pull';
 
-export const Visibility = () => (
+export const Visibility: Story = () => (
   <Grid style={style} dir="ltr">
     <Grid.Row>
       <Grid.Col sizeSm={12} hiddenXxlUp>
@@ -98,7 +98,7 @@ Visibility.parameters = {
   },
 };
 
-export const WithoutCompoundComponents = () => (
+export const WithoutCompoundComponents: Story = () => (
   <Grid style={style} dir="ltr">
     <Row>
       <Col sizeSm="6" sizeMd={4} sizeLg={2}>
