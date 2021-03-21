@@ -61,7 +61,7 @@ import { Grid } from 'fluentui-react-grid';
 
 ...
 
-<Grid>
+<Grid dir="ltr">
   <Grid.Row>
     <Grid.Col>Col content here...</Grid.Col>
     ...
@@ -79,7 +79,7 @@ import { Grid, Row, Col } from 'fluentui-react-grid';
 
 ...
 
-<Grid>
+<Grid dir="ltr">
   <Row>
     <Col>Col content here...</Col>
     ...
