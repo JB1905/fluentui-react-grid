@@ -214,7 +214,7 @@ _You need to specify grid order for correct positioning. Add `dir="ltr"` – (or
 ### Without Compound Components
 
 ```jsx
-<Grid style={style} dir="ltr">
+<Grid dir="ltr">
   <Row>
     <Col sizeSm="6" sizeMd={4} sizeLg={2}>
       <DemoBlock>A</DemoBlock>
