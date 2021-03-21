@@ -61,7 +61,7 @@ import { Grid } from 'fluentui-react-grid';
 
 ...
 
-<Grid dir="ltr">
+<Grid>
   <Grid.Row>
     <Grid.Col>Col content here...</Grid.Col>
     ...
@@ -79,7 +79,7 @@ import { Grid, Row, Col } from 'fluentui-react-grid';
 
 ...
 
-<Grid dir="ltr">
+<Grid>
   <Row>
     <Col>Col content here...</Col>
     ...
@@ -98,7 +98,7 @@ import { Grid, Row, Col } from 'fluentui-react-grid';
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
 
-_You need to specify grid order for correct positioning. Add `dir="ltr"` – (order from left to right) or `dir="rtl"` – (right to left/reversed order)_
+_By default grid order is `dir="ltr"` – (order from left to right). You can change it to `dir="rtl"` – (right to left/reversed order) or set `dir={undefined}` to remove (it will break the layout)_
 
 ### Row
 
@@ -154,7 +154,7 @@ _You need to specify grid order for correct positioning. Add `dir="ltr"` – (or
 ### Basics
 
 ```jsx
-<Grid dir="ltr">
+<Grid>
   <Grid.Row>
     <Grid.Col sizeSm={6} sizeMd={4} sizeLg={2}>
       A
@@ -170,7 +170,7 @@ _You need to specify grid order for correct positioning. Add `dir="ltr"` – (or
 ### Inheritance
 
 ```jsx
-<Grid dir="ltr">
+<Grid>
   <Grid.Row>
     <Grid.Col sizeSm={12} sizeLg={4}>
       Example
@@ -182,7 +182,7 @@ _You need to specify grid order for correct positioning. Add `dir="ltr"` – (or
 ### Push and pull
 
 ```jsx
-<Grid dir="ltr">
+<Grid>
   <Grid.Row>
     <Grid.Col sizeSm={4} smPush={8}>
       First in code
@@ -198,7 +198,7 @@ _You need to specify grid order for correct positioning. Add `dir="ltr"` – (or
 ### Visibility
 
 ```jsx
-<Grid dir="ltr">
+<Grid>
   <Grid.Row>
     <Grid.Col sizeSm={12} hiddenXxlUp>
       Visible on smaller screens
@@ -214,7 +214,7 @@ _You need to specify grid order for correct positioning. Add `dir="ltr"` – (or
 ### Without Compound Components
 
 ```jsx
-<Grid dir="ltr">
+<Grid>
   <Row>
     <Col sizeSm="6" sizeMd={4} sizeLg={2}>
       <DemoBlock>A</DemoBlock>
