@@ -59,17 +59,17 @@ You also need to include CSS styles (in HTML head section e.g.: in index.html fi
 ```jsx
 import { Grid } from 'fluentui-react-grid';
 
-...
+// ...
 
 <Grid>
   <Grid.Row>
     <Grid.Col>Col content here...</Grid.Col>
-    ...
+    {/* ... */}
   </Grid.Row>
-  ...
-</Grid>
+  {/* ... */}
+</Grid>;
 
-...
+// ...
 ```
 
 **Or import all components:**
@@ -77,17 +77,17 @@ import { Grid } from 'fluentui-react-grid';
 ```jsx
 import { Grid, Row, Col } from 'fluentui-react-grid';
 
-...
+// ...
 
 <Grid>
   <Row>
     <Col>Col content here...</Col>
-    ...
+    {/* ... */}
   </Row>
-  ...
-</Grid>
+  {/* ... */}
+</Grid>;
 
-...
+// ...
 ```
 
 ## Components
