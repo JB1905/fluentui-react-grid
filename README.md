@@ -61,13 +61,17 @@ import { Grid } from 'fluentui-react-grid';
 
 // ...
 
-<Grid>
-  <Grid.Row>
-    <Grid.Col>Col content here...</Grid.Col>
-    {/* ... */}
-  </Grid.Row>
-  {/* ... */}
-</Grid>;
+const App = () => {
+  return (
+    <Grid>
+      <Grid.Row>
+        <Grid.Col>Col content here...</Grid.Col>
+        {/* ... */}
+      </Grid.Row>
+      {/* ... */}
+    </Grid>
+  );
+};
 
 // ...
 ```
@@ -79,13 +83,17 @@ import { Grid, Row, Col } from 'fluentui-react-grid';
 
 // ...
 
-<Grid>
-  <Row>
-    <Col>Col content here...</Col>
-    {/* ... */}
-  </Row>
-  {/* ... */}
-</Grid>;
+const App = () => {
+  return (
+    <Grid>
+      <Row>
+        <Col>Col content here...</Col>
+        {/* ... */}
+      </Row>
+      {/* ... */}
+    </Grid>
+  );
+};
 
 // ...
 ```
