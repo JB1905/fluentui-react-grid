@@ -1,3 +1,10 @@
-export { Col } from './components/Col';
-export { Grid } from './components/Grid';
-export { Row } from './components/Row';
+import { Grid } from './components/Grid';
+import { Row } from './components/Row';
+import { Col } from './components/Col';
+
+export { Grid, Row, Col };
+
+Grid.Row = Row;
+Grid.Col = Col;
+
+export default Grid;
