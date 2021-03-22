@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Grid, Row, Col } from '../src';
+import CompoundGrid, { Grid, Row, Col } from '../src';
 
 describe('Grid', () => {
   it('should render grid without params', () => {
@@ -19,11 +19,11 @@ describe('Grid', () => {
 
   it('should render grid with custom params', () => {
     const { container } = render(
-      <Grid dir="ltr">
-        <Grid.Row>
-          <Grid.Col>Hello</Grid.Col>
+      <CompoundGrid dir="ltr">
+        <CompoundGrid.Row>
+          <CompoundGrid.Col>Hello</CompoundGrid.Col>
 
-          <Grid.Col
+          <CompoundGrid.Col
             className="custom-class-name"
             sizeSm={12}
             sizeMd={8}
@@ -59,9 +59,9 @@ describe('Grid', () => {
             hiddenXxlUp
           >
             World
-          </Grid.Col>
-        </Grid.Row>
-      </Grid>
+          </CompoundGrid.Col>
+        </CompoundGrid.Row>
+      </CompoundGrid>
     );
 
     expect(container).toMatchSnapshot();
