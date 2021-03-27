@@ -106,7 +106,7 @@ const App = () => {
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
 
-_By default grid order is `dir="ltr"` – (order from left to right). You can change it to `dir="rtl"` – (right to left/reversed order) or set `dir={undefined}` to remove (it will break the layout)_
+_By default grid order is `dir="ltr"` – (order from left to right). You can change it to `dir="rtl"` – (right to left/reversed order) or set `dir="auto"` to remove (it will break the layout)_
 
 ### Row
 
