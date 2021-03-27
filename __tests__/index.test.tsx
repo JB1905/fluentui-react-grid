@@ -4,9 +4,15 @@ import { render } from '@testing-library/react';
 import { Grid, Row, Col } from '../src';
 
 describe('Grid', () => {
-  it('should render grid without params', () => {
+  // TODO
+  it.each`
+    dir
+    ${'ltr'}
+    ${'rtl'}
+    ${undefined}
+  `('should render grid with dir: $dir', ({ dir }) => {
     const { container } = render(
-      <Grid dir="ltr">
+      <Grid dir={dir}>
         <Row>
           <Col>Hello</Col>
           <Col>World</Col>
@@ -19,7 +25,7 @@ describe('Grid', () => {
 
   it('should render grid with custom params', () => {
     const { container } = render(
-      <Grid dir="ltr">
+      <Grid>
         <Grid.Row>
           <Grid.Col>Hello</Grid.Col>
 

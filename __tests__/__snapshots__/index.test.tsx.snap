@@ -24,7 +24,55 @@ exports[`Grid should render grid with custom params 1`] = `
 </div>
 `;
 
-exports[`Grid should render grid without params 1`] = `
+exports[`Grid should render grid with dir: ltr 1`] = `
+<div>
+  <div
+    class="ms-Grid"
+    dir="ltr"
+  >
+    <div
+      class="ms-Grid-row"
+    >
+      <div
+        class="ms-Grid-col"
+      >
+        Hello
+      </div>
+      <div
+        class="ms-Grid-col"
+      >
+        World
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid should render grid with dir: rtl 1`] = `
+<div>
+  <div
+    class="ms-Grid"
+    dir="rtl"
+  >
+    <div
+      class="ms-Grid-row"
+    >
+      <div
+        class="ms-Grid-col"
+      >
+        Hello
+      </div>
+      <div
+        class="ms-Grid-col"
+      >
+        World
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid should render grid with dir: undefined 1`] = `
 <div>
   <div
     class="ms-Grid"
