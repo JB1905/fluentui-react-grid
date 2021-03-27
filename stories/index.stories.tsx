@@ -17,7 +17,7 @@ export default {
     dir: {
       control: {
         type: 'inline-radio',
-        options: ['ltr', 'rtl'],
+        options: ['ltr', 'rtl', 'auto'],
       },
     },
   },
