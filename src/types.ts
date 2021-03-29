@@ -1,3 +1,3 @@
-import { dirs } from '../constants/dirs';
+import { dirs } from './constants/dirs';
 
 export type Dir = typeof dirs[number];
