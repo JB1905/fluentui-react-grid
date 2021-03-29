@@ -1,1 +1,3 @@
-export type Dir = 'ltr' | 'rtl' | 'auto';
+import { dirs } from '../constants/dirs';
+
+export type Dir = typeof dirs[number];
