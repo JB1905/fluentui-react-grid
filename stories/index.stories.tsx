@@ -4,6 +4,8 @@ import { styled } from '@storybook/theming';
 
 import { Grid, Row, Col } from '../src';
 
+import { dirs } from '../src/constants/dirs';
+
 import type { Dir } from '../src/types';
 
 interface Props {
@@ -17,7 +19,7 @@ export default {
     dir: {
       control: {
         type: 'inline-radio',
-        options: ['ltr', 'rtl', 'auto'],
+        options: dirs,
       },
     },
   },
