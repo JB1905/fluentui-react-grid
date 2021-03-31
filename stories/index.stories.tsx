@@ -17,9 +17,9 @@ export default {
   component: Grid,
   argTypes: {
     dir: {
+      options: dirs,
       control: {
         type: 'inline-radio',
-        options: dirs,
       },
     },
   },
@@ -96,7 +96,7 @@ export const Visibility: Story = () => (
 
 Visibility.parameters = {
   controls: {
-    disabled: true,
+    disable: true,
   },
 };
 
@@ -116,6 +116,6 @@ export const WithoutCompoundComponents: Story = () => (
 
 WithoutCompoundComponents.parameters = {
   controls: {
-    disabled: true,
+    disable: true,
   },
 };
