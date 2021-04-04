@@ -11,23 +11,22 @@
 
 React components for Fluent UI layout styles
 
+### Demo
+
+[**Playground – play with library in Storybook**](https://jb1905.github.io/fluentui-react-grid/)
+
 ### Alternatives
 
 - [Fluent UI styles](https://developer.microsoft.com/en-us/fluentui#/styles/web/layout)
 
 ## Contents
 
-- [Demo](#demo)
 - [How to Install](#how-to-install)
 - [Components](#components)
   - [Grid](#grid)
   - [Row](#row)
   - [Col](#col)
 - [Example](#example)
-
-## Demo
-
-[**Playground – play with library in Storybook**](https://jb1905.github.io/fluentui-react-grid/)
 
 ## How to Install
 
