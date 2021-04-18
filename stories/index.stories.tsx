@@ -3,6 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { styled } from '@storybook/theming';
 
 import { Grid, Row, Col } from '../src';
+import { Props as ColProps } from '../src/components/Col';
 
 import { dirs } from '../src/constants/dirs';
 
@@ -40,19 +41,41 @@ const DemoBlock = styled.div`
   text-align: center;
 `;
 
-export const Basics: Story<Props> = ({ dir }) => (
-  <Grid style={style} dir={dir}>
-    <Grid.Row>
-      <Grid.Col sizeSm="6" sizeMd={4} sizeLg={2}>
-        <DemoBlock>A</DemoBlock>
-      </Grid.Col>
+const grid: ColProps[][] = [
+  [
+    {
+      sizeSm: 12,
+      sizeLg: '4',
+      children: 'A',
+    },
+    {
+      sizeSm: 12,
+      sizeLg: '4',
+      children: 'B',
+    },
+  ],
+];
 
-      <Grid.Col sizeSm={6} sizeMd="8" sizeLg={10}>
-        <DemoBlock>B</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
+export const Basics: Story<Props & { readonly grid: typeof grid }> = ({
+  dir,
+  grid,
+}) => (
+  <Grid style={style} dir={dir}>
+    {grid.map((row, index) => (
+      <Grid.Row key={index}>
+        {row.map((col, index) => (
+          <Grid.Col {...col} key={index}>
+            <DemoBlock>{col.children}</DemoBlock>
+          </Grid.Col>
+        ))}
+      </Grid.Row>
+    ))}
   </Grid>
 );
+
+Basics.args = {
+  grid,
+};
 
 export const Inheritance: Story<Props> = ({ dir }) => (
   <Grid style={style} dir={dir}>
