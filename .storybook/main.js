@@ -5,6 +5,7 @@ module.exports = {
     '@storybook/theming',
     '@storybook/addon-viewport',
     '@storybook/addon-controls',
+    '@storybook/addon-storysource',
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
