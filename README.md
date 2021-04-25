@@ -4,7 +4,7 @@
 [![NPM downloads](https://img.shields.io/npm/dm/fluentui-react-grid?style=flat-square)](https://www.npmjs.com/package/fluentui-react-grid)
 [![NPM license](https://img.shields.io/npm/l/fluentui-react-grid?style=flat-square)](https://www.npmjs.com/package/fluentui-react-grid)
 [![Codecov](https://img.shields.io/codecov/c/github/JB1905/fluentui-react-grid?style=flat-square)](https://codecov.io/gh/JB1905/fluentui-react-grid)
-[![Travis](https://img.shields.io/travis/JB1905/fluentui-react-grid/master?style=flat-square)](https://travis-ci.org/JB1905/fluentui-react-grid)
+[![Travis](https://img.shields.io/travis/com/JB1905/fluentui-react-grid/master?style=flat-square)](https://travis-ci.com/JB1905/fluentui-react-grid)
 [![Bundle size](https://img.shields.io/bundlephobia/min/fluentui-react-grid?style=flat-square)](https://bundlephobia.com/result?p=fluentui-react-grid)
 
 ## About
