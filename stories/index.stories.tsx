@@ -40,6 +40,7 @@ const DemoBlock = styled.div`
   text-align: center;
 `;
 
+// TODO disable controls?
 export const Basics: Story<Props> = ({ dir }) => (
   <Grid style={style} dir={dir}>
     <Grid.Row>
