@@ -43,12 +43,126 @@ const DemoBlock = styled.div`
 export const Basics: Story<Props> = ({ dir }) => (
   <Grid style={style} dir={dir}>
     <Grid.Row>
-      <Grid.Col sizeSm="6" sizeMd={4} sizeLg={2}>
-        <DemoBlock>A</DemoBlock>
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
       </Grid.Col>
 
-      <Grid.Col sizeSm={6} sizeMd="8" sizeLg={10}>
-        <DemoBlock>B</DemoBlock>
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="1">
+        <DemoBlock>1</DemoBlock>
+      </Grid.Col>
+    </Grid.Row>
+
+    <Grid.Row>
+      <Grid.Col sizeSm="2">
+        <DemoBlock>2</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="2">
+        <DemoBlock>2</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="2">
+        <DemoBlock>2</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="2">
+        <DemoBlock>2</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="2">
+        <DemoBlock>2</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="2">
+        <DemoBlock>2</DemoBlock>
+      </Grid.Col>
+    </Grid.Row>
+
+    <Grid.Row>
+      <Grid.Col sizeSm="3">
+        <DemoBlock>3</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="3">
+        <DemoBlock>3</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="3">
+        <DemoBlock>3</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="3">
+        <DemoBlock>3</DemoBlock>
+      </Grid.Col>
+    </Grid.Row>
+
+    <Grid.Row>
+      <Grid.Col sizeSm="4">
+        <DemoBlock>4</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="4">
+        <DemoBlock>4</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="4">
+        <DemoBlock>4</DemoBlock>
+      </Grid.Col>
+    </Grid.Row>
+
+    <Grid.Row>
+      <Grid.Col sizeSm="6">
+        <DemoBlock>6</DemoBlock>
+      </Grid.Col>
+
+      <Grid.Col sizeSm="6">
+        <DemoBlock>6</DemoBlock>
+      </Grid.Col>
+    </Grid.Row>
+
+    <Grid.Row>
+      <Grid.Col sizeSm="12">
+        <DemoBlock>12</DemoBlock>
       </Grid.Col>
     </Grid.Row>
   </Grid>
