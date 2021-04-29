@@ -28,6 +28,7 @@ export default {
   },
 } as Meta;
 
+// TODO add page wrapper (margin top/bottom 8px)
 const style = { width: '100%' };
 
 const DemoBlock = styled.div`
