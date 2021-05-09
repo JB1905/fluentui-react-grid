@@ -4,7 +4,6 @@ import { render } from '@testing-library/react';
 import { Grid, Row, Col } from '../src';
 
 describe('Grid', () => {
-  // TODO
   it.each`
     dir
     ${'ltr'}

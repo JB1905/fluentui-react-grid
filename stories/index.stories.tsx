@@ -8,9 +8,14 @@ import { dirs } from '../src/constants/dirs';
 
 import type { Dir } from '../src/types';
 
+import { grid, GridSchema } from '../__mocks__/gridSchema';
+
 interface Props {
   readonly dir: Dir;
+  readonly grid: GridSchema;
 }
+
+const style = { width: '100%' };
 
 export default {
   title: 'Grid',
@@ -26,10 +31,14 @@ export default {
   args: {
     dir: 'ltr',
   },
+  decorators: [
+    (Story) => (
+      <div style={{ ...style, marginTop: 16, marginLeft: 8, marginRight: 8 }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
-
-// TODO add page wrapper (margin top/bottom 8px)
-const style = { width: '100%' };
 
 const DemoBlock = styled.div`
   background-color: #a19f9d;
@@ -41,130 +50,15 @@ const DemoBlock = styled.div`
   text-align: center;
 `;
 
-// TODO disable controls?
 export const Basics: Story<Props> = ({ dir }) => (
   <Grid style={style} dir={dir}>
     <Grid.Row>
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
+      <Grid.Col sizeSm="6" sizeMd={4} sizeLg={2}>
+        <DemoBlock>A</DemoBlock>
       </Grid.Col>
 
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="1">
-        <DemoBlock>1</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-
-    <Grid.Row>
-      <Grid.Col sizeSm="2">
-        <DemoBlock>2</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="2">
-        <DemoBlock>2</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="2">
-        <DemoBlock>2</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="2">
-        <DemoBlock>2</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="2">
-        <DemoBlock>2</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="2">
-        <DemoBlock>2</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-
-    <Grid.Row>
-      <Grid.Col sizeSm="3">
-        <DemoBlock>3</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="3">
-        <DemoBlock>3</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="3">
-        <DemoBlock>3</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="3">
-        <DemoBlock>3</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-
-    <Grid.Row>
-      <Grid.Col sizeSm="4">
-        <DemoBlock>4</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="4">
-        <DemoBlock>4</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="4">
-        <DemoBlock>4</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-
-    <Grid.Row>
-      <Grid.Col sizeSm="6">
-        <DemoBlock>6</DemoBlock>
-      </Grid.Col>
-
-      <Grid.Col sizeSm="6">
-        <DemoBlock>6</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-
-    <Grid.Row>
-      <Grid.Col sizeSm="12">
-        <DemoBlock>12</DemoBlock>
+      <Grid.Col sizeSm={6} sizeMd="8" sizeLg={10}>
+        <DemoBlock>B</DemoBlock>
       </Grid.Col>
     </Grid.Row>
   </Grid>
@@ -194,7 +88,7 @@ export const PushAndPull: Story<Props> = ({ dir }) => (
   </Grid>
 );
 
-PushAndPull.storyName = 'Push and pull';
+PushAndPull.storyName = 'Push and Pull';
 
 export const Visibility: Story = () => (
   <Grid style={style}>
@@ -235,3 +129,20 @@ WithoutCompoundComponents.parameters = {
     disable: true,
   },
 };
+
+export const Interactive: Story<Props> = ({ dir, grid }) => (
+  <Grid style={style} dir={dir}>
+    {grid.map((row, rowIndex) => (
+      <Grid.Row key={rowIndex}>
+        {row.map(({ text, ...colProps }, colIndex) => (
+          <Grid.Col {...colProps} key={colIndex}>
+            <DemoBlock>{text}</DemoBlock>
+          </Grid.Col>
+        ))}
+      </Grid.Row>
+    ))}
+  </Grid>
+);
+
+Interactive.storyName = 'Interactive Example';
+Interactive.args = { grid };
