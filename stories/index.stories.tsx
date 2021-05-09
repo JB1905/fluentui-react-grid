@@ -32,7 +32,15 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{ ...style, marginTop: 16, marginLeft: 8, marginRight: 8 }}>
+      <div
+        style={{
+          ...style,
+          minWidth: 320,
+          marginTop: 16,
+          marginLeft: 8,
+          marginRight: 8,
+        }}
+      >
         <Story />
       </div>
     ),
