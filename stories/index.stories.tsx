@@ -8,9 +8,14 @@ import { dirs } from '../src/constants/dirs';
 
 import type { Dir } from '../src/types';
 
+import { grid, GridSchema } from '../__mocks__/gridSchema';
+
 interface Props {
   readonly dir: Dir;
+  readonly grid: GridSchema;
 }
+
+const style = { width: '100%' };
 
 export default {
   title: 'Grid',
@@ -26,9 +31,14 @@ export default {
   args: {
     dir: 'ltr',
   },
+  decorators: [
+    (Story) => (
+      <div style={{ ...style, marginTop: 16, marginLeft: 8, marginRight: 8 }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
-
-const style = { width: '100%' };
 
 const DemoBlock = styled.div`
   background-color: #a19f9d;
@@ -78,7 +88,7 @@ export const PushAndPull: Story<Props> = ({ dir }) => (
   </Grid>
 );
 
-PushAndPull.storyName = 'Push and pull';
+PushAndPull.storyName = 'Push and Pull';
 
 export const Visibility: Story = () => (
   <Grid style={style}>
@@ -119,3 +129,20 @@ WithoutCompoundComponents.parameters = {
     disable: true,
   },
 };
+
+export const Interactive: Story<Props> = ({ dir, grid }) => (
+  <Grid style={style} dir={dir}>
+    {grid.map((row, rowIndex) => (
+      <Grid.Row key={rowIndex}>
+        {row.map(({ text, ...colProps }, colIndex) => (
+          <Grid.Col {...colProps} key={colIndex}>
+            <DemoBlock>{text}</DemoBlock>
+          </Grid.Col>
+        ))}
+      </Grid.Row>
+    ))}
+  </Grid>
+);
+
+Interactive.storyName = 'Interactive Example';
+Interactive.args = { grid };
