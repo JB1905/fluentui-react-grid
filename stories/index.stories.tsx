@@ -12,7 +12,6 @@ import { grid, GridSchema } from '../__mocks__/gridSchema';
 
 interface Props {
   readonly dir: Dir;
-  readonly grid: GridSchema;
 }
 
 const style = { width: '100%' };
@@ -130,13 +129,17 @@ WithoutCompoundComponents.parameters = {
   },
 };
 
-export const Interactive: Story<Props> = ({ dir, grid }) => (
+export const Interactive: Story<
+  Props & {
+    readonly grid: GridSchema;
+  }
+> = ({ dir, grid }) => (
   <Grid style={style} dir={dir}>
     {grid.map((row, rowIndex) => (
       <Grid.Row key={rowIndex}>
-        {row.map(({ text, ...colProps }, colIndex) => (
+        {row.map(({ children, ...colProps }, colIndex) => (
           <Grid.Col {...colProps} key={colIndex}>
-            <DemoBlock>{text}</DemoBlock>
+            <DemoBlock>{children}</DemoBlock>
           </Grid.Col>
         ))}
       </Grid.Row>
