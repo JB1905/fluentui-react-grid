@@ -29,7 +29,7 @@ export default {
   },
   args: {
     dir: 'ltr',
-  },
+  } as Props,
   decorators: [
     (Story) => (
       <div
