@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'; // TODO jsx syntax
 import { render } from '@testing-library/react';
 
 import { Grid, Row, Col } from '../src';
 
 describe('Grid', () => {
+  // TODO update to $param
   it.each`
     dir
     ${'ltr'}

@@ -1,4 +1,4 @@
-import React, { HTMLProps } from 'react';
+import React, { HTMLProps } from 'react'; // TODO jsx syntax
 import clsx from 'clsx';
 
 import { Row } from './Row';

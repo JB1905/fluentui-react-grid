@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // TODO jsx syntax
 import { Meta, Story } from '@storybook/react';
 import { styled } from '@storybook/theming';
 

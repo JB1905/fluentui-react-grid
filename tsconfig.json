@@ -5,6 +5,7 @@
     "checkJs": false,
     "declaration": true,
     "jsx": "react",
+    // "jsx": "react-jsx",
     "outDir": "lib",
     "strict": true,
     "moduleResolution": "Node",

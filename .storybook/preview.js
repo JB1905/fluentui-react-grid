@@ -1,6 +1,6 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+// import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 export const parameters = {
   previewTabs: {
@@ -8,13 +8,13 @@ export const parameters = {
       hidden: true,
     },
   },
-  viewport: {
-    viewports: {
-      ...MINIMAL_VIEWPORTS,
-    },
-  },
+  // viewport: {
+  //   viewports: {
+  //     ...MINIMAL_VIEWPORTS,
+  //   },
+  // },
   docs: { page: null },
-  layout: 'fullscreen',
+  // layout: 'fullscreen', // TODO
 };
 
 addDecorator((Story) => (
