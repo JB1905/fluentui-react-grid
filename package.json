@@ -27,15 +27,15 @@
     "url": "https://github.com/JB1905/fluentui-react-grid.git"
   },
   "keywords": [
-    "grid",
-    "row",
-    "col",
     "react",
-    "components",
-    "fluent",
     "microsoft",
+    "components",
+    "grid",
+    "layout",
+    "row",
     "styles",
-    "layout"
+    "fluent",
+    "col"
   ],
   "bugs": {
     "url": "https://github.com/JB1905/fluentui-react-grid/issues"
