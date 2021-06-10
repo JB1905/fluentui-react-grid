@@ -8,7 +8,7 @@ import { dirs } from '../src/constants/dirs';
 
 import type { Dir } from '../src/types';
 
-import { grid, GridSchema } from './gridSchema';
+import { grid, GridSchema } from '../__mocks__/gridSchema';
 
 interface Props {
   readonly dir: Dir;
