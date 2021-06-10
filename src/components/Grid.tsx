@@ -1,9 +1,6 @@
 import React, { HTMLProps } from 'react';
 import clsx from 'clsx';
 
-import { Row } from './Row';
-import { Col } from './Col';
-
 import type { Dir } from '../types';
 
 export interface GridProps extends Omit<HTMLProps<HTMLDivElement>, 'dir'> {
@@ -20,6 +17,3 @@ export const Grid = ({
     {children}
   </div>
 );
-
-Grid.Row = Row;
-Grid.Col = Col;

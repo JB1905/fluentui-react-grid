@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { styled } from '@storybook/theming';
 
-import { Grid, Row, Col } from '../src';
+import CompoundGrid, { Grid, Row, Col } from '../src';
 
 import { dirs } from '../src/constants/dirs';
 
@@ -18,7 +18,7 @@ const style = { width: '100%' };
 
 export default {
   title: 'Grid',
-  component: Grid,
+  component: CompoundGrid,
   argTypes: {
     dir: {
       options: dirs,
@@ -58,57 +58,57 @@ const DemoBlock = styled.div`
 `;
 
 export const Basics: Story<Props> = ({ dir }) => (
-  <Grid style={style} dir={dir}>
-    <Grid.Row>
-      <Grid.Col sizeSm="6" sizeMd={4} sizeLg={2}>
+  <CompoundGrid style={style} dir={dir}>
+    <CompoundGrid.Row>
+      <CompoundGrid.Col sizeSm="6" sizeMd={4} sizeLg={2}>
         <DemoBlock>A</DemoBlock>
-      </Grid.Col>
+      </CompoundGrid.Col>
 
-      <Grid.Col sizeSm={6} sizeMd="8" sizeLg={10}>
+      <CompoundGrid.Col sizeSm={6} sizeMd="8" sizeLg={10}>
         <DemoBlock>B</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-  </Grid>
+      </CompoundGrid.Col>
+    </CompoundGrid.Row>
+  </CompoundGrid>
 );
 
 export const Inheritance: Story<Props> = ({ dir }) => (
-  <Grid style={style} dir={dir}>
-    <Grid.Row>
-      <Grid.Col sizeSm={12} sizeLg="4">
+  <CompoundGrid style={style} dir={dir}>
+    <CompoundGrid.Row>
+      <CompoundGrid.Col sizeSm={12} sizeLg="4">
         <DemoBlock>Example</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-  </Grid>
+      </CompoundGrid.Col>
+    </CompoundGrid.Row>
+  </CompoundGrid>
 );
 
 export const PushAndPull: Story<Props> = ({ dir }) => (
-  <Grid style={style} dir={dir}>
-    <Grid.Row>
-      <Grid.Col sizeSm={4} smPush="8">
+  <CompoundGrid style={style} dir={dir}>
+    <CompoundGrid.Row>
+      <CompoundGrid.Col sizeSm={4} smPush="8">
         <DemoBlock>First in code</DemoBlock>
-      </Grid.Col>
+      </CompoundGrid.Col>
 
-      <Grid.Col sizeSm={8} smPull={4}>
+      <CompoundGrid.Col sizeSm={8} smPull={4}>
         <DemoBlock>Second in code</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-  </Grid>
+      </CompoundGrid.Col>
+    </CompoundGrid.Row>
+  </CompoundGrid>
 );
 
 PushAndPull.storyName = 'Push and Pull';
 
 export const Visibility: Story = () => (
-  <Grid style={style}>
-    <Grid.Row>
-      <Grid.Col sizeSm={12} hiddenXxlUp>
+  <CompoundGrid style={style}>
+    <CompoundGrid.Row>
+      <CompoundGrid.Col sizeSm={12} hiddenXxlUp>
         <DemoBlock>Visible on smaller screens</DemoBlock>
-      </Grid.Col>
+      </CompoundGrid.Col>
 
-      <Grid.Col sizeSm="12" hiddenXlDown>
+      <CompoundGrid.Col sizeSm="12" hiddenXlDown>
         <DemoBlock>Visible on larger screens</DemoBlock>
-      </Grid.Col>
-    </Grid.Row>
-  </Grid>
+      </CompoundGrid.Col>
+    </CompoundGrid.Row>
+  </CompoundGrid>
 );
 
 Visibility.parameters = {
@@ -142,17 +142,17 @@ export const Interactive: Story<
     readonly grid: GridSchema;
   }
 > = ({ dir, grid }) => (
-  <Grid style={style} dir={dir}>
+  <CompoundGrid style={style} dir={dir}>
     {grid.map((row, rowIndex) => (
-      <Grid.Row key={rowIndex}>
+      <CompoundGrid.Row key={rowIndex}>
         {row.map(({ children, ...colProps }, colIndex) => (
-          <Grid.Col {...colProps} key={colIndex}>
+          <CompoundGrid.Col {...colProps} key={colIndex}>
             <DemoBlock>{children}</DemoBlock>
-          </Grid.Col>
+          </CompoundGrid.Col>
         ))}
-      </Grid.Row>
+      </CompoundGrid.Row>
     ))}
-  </Grid>
+  </CompoundGrid>
 );
 
 Interactive.storyName = 'Interactive Example';
