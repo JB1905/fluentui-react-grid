@@ -1,10 +1,19 @@
 import React, { HTMLProps } from 'react';
 import clsx from 'clsx';
 
-export interface GridProps extends HTMLProps<HTMLDivElement> {}
+import type { Dir } from '../types';
 
-export const Grid = ({ children, className, ...props }: GridProps) => (
-  <div className={clsx('ms-Grid', className)} {...props}>
+export interface GridProps extends Omit<HTMLProps<HTMLDivElement>, 'dir'> {
+  readonly dir?: Dir;
+}
+
+export const Grid = ({
+  children,
+  className,
+  dir = 'ltr',
+  ...props
+}: GridProps) => (
+  <div className={clsx('ms-Grid', className)} dir={dir} {...props}>
     {children}
   </div>
 );

@@ -4,29 +4,48 @@ import { styled } from '@storybook/theming';
 
 import CompoundGrid, { Grid, Row, Col } from '../src';
 
-type Dir = 'ltr' | 'rtl';
+import { dirs } from '../src/constants/dirs';
+
+import type { Dir } from '../src/types';
+
+import { grid, GridSchema } from '../__mocks__/gridSchema';
 
 interface Props {
   readonly dir: Dir;
 }
+
+const style = { width: '100%' };
 
 export default {
   title: 'Grid',
   component: CompoundGrid,
   argTypes: {
     dir: {
+      options: dirs,
       control: {
         type: 'inline-radio',
-        options: ['ltr', 'rtl'],
       },
     },
   },
   args: {
     dir: 'ltr',
-  },
+  } as Props,
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          ...style,
+          minWidth: 320,
+          marginTop: 16,
+          marginLeft: 8,
+          marginRight: 8,
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
-
-const style = { width: '100%' };
 
 const DemoBlock = styled.div`
   background-color: #a19f9d;
@@ -76,10 +95,10 @@ export const PushAndPull: Story<Props> = ({ dir }) => (
   </CompoundGrid>
 );
 
-PushAndPull.storyName = 'Push and pull';
+PushAndPull.storyName = 'Push and Pull';
 
 export const Visibility: Story = () => (
-  <CompoundGrid style={style} dir="ltr">
+  <CompoundGrid style={style}>
     <CompoundGrid.Row>
       <CompoundGrid.Col sizeSm={12} hiddenXxlUp>
         <DemoBlock>Visible on smaller screens</DemoBlock>
@@ -94,12 +113,12 @@ export const Visibility: Story = () => (
 
 Visibility.parameters = {
   controls: {
-    disabled: true,
+    disable: true,
   },
 };
 
 export const WithoutCompoundComponents: Story = () => (
-  <Grid style={style} dir="ltr">
+  <Grid style={style}>
     <Row>
       <Col sizeSm="6" sizeMd={4} sizeLg={2}>
         <DemoBlock>A</DemoBlock>
@@ -114,6 +133,27 @@ export const WithoutCompoundComponents: Story = () => (
 
 WithoutCompoundComponents.parameters = {
   controls: {
-    disabled: true,
+    disable: true,
   },
 };
+
+export const Interactive: Story<
+  Props & {
+    readonly grid: GridSchema;
+  }
+> = ({ dir, grid }) => (
+  <CompoundGrid style={style} dir={dir}>
+    {grid.map((row, rowIndex) => (
+      <CompoundGrid.Row key={rowIndex}>
+        {row.map(({ children, ...colProps }, colIndex) => (
+          <CompoundGrid.Col {...colProps} key={colIndex}>
+            <DemoBlock>{children}</DemoBlock>
+          </CompoundGrid.Col>
+        ))}
+      </CompoundGrid.Row>
+    ))}
+  </CompoundGrid>
+);
+
+Interactive.storyName = 'Interactive Example';
+Interactive.args = { grid };

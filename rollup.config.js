@@ -11,6 +11,7 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
+      exports: 'default',
       sourcemap: true,
     },
     {
@@ -21,7 +22,7 @@ export default {
   ],
   plugins: [resolve(), peerDepsExternal(), typescript(), terser()],
   external: [
-    ...Object.keys(pkg.dependencies),
-    ...Object.keys(pkg.peerDependencies),
+    ...Object.keys(pkg.dependencies || {}),
+    ...Object.keys(pkg.peerDependencies || {}),
   ],
 };

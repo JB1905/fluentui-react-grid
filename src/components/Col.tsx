@@ -1,11 +1,11 @@
 import React, { HTMLProps } from 'react';
 import clsx from 'clsx';
 
-type NumericSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+export type NumericSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-type Size = NumericSize | `${NumericSize}`;
+export type Size = NumericSize | `${NumericSize}`;
 
-export interface Props extends HTMLProps<HTMLDivElement> {
+export interface ColProps extends HTMLProps<HTMLDivElement> {
   readonly sizeSm?: Size;
   readonly sizeMd?: Size;
   readonly sizeLg?: Size;
@@ -84,7 +84,7 @@ export const Col = ({
   hiddenXxxl,
 
   ...props
-}: Props) => (
+}: ColProps) => (
   <div
     className={clsx(
       'ms-Grid-col',

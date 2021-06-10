@@ -4,9 +4,14 @@ import { render } from '@testing-library/react';
 import CompoundGrid, { Grid, Row, Col } from '../src';
 
 describe('Grid', () => {
-  it('should render grid without params', () => {
+  it.each`
+    dir
+    ${'ltr'}
+    ${'rtl'}
+    ${undefined}
+  `('should render grid with dir: $dir', ({ dir }) => {
     const { container } = render(
-      <Grid dir="ltr">
+      <Grid dir={dir}>
         <Row>
           <Col>Hello</Col>
           <Col>World</Col>
@@ -19,7 +24,7 @@ describe('Grid', () => {
 
   it('should render grid with custom params', () => {
     const { container } = render(
-      <CompoundGrid dir="ltr">
+      <CompoundGrid>
         <CompoundGrid.Row>
           <CompoundGrid.Col>Hello</CompoundGrid.Col>
 
