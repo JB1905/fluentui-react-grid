@@ -18,7 +18,8 @@ const style = { width: '100%' };
 
 export default {
   title: 'Grid',
-  component: CompoundGrid,
+  component: Grid,
+  subcomponents: { Row, Col },
   argTypes: {
     dir: {
       options: dirs,
