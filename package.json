@@ -19,8 +19,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "commit": "git-cz",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,8 @@
     "clsx": "^1.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@storybook/addon-controls": "^6.3.0-rc.7",
     "@storybook/addon-docs": "^6.3.0-rc.7",
@@ -59,6 +62,7 @@
     "@types/react": "^17.0.11",
     "@typescript-eslint/parser": "^4.27.0",
     "babel-loader": "^8.2.2",
+    "commitlint": "^12.1.4",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.28.0",
     "eslint-config-prettier": "^8.3.0",
@@ -92,11 +96,6 @@
     ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
