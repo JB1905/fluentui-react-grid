@@ -13,7 +13,7 @@ React components for Fluent UI layout styles
 
 ### Demo
 
-[**Playground – play with library in Storybook**](https://jb1905.github.io/fluentui-react-grid/)
+[**Playground – play with the library in Storybook**](https://jb1905.github.io/fluentui-react-grid/)
 
 ### Alternatives
 
@@ -42,7 +42,7 @@ Or Yarn:
 $ yarn add fluentui-react-grid
 ```
 
-You also need to include CSS styles (in HTML head section e.g.: in index.html file):
+You also need to include CSS styles (in the HTML header section, e.g. in index.html):
 
 ```html
 <link
@@ -53,7 +53,7 @@ You also need to include CSS styles (in HTML head section e.g.: in index.html fi
 
 ## Getting Started
 
-**Import default component and use as Compound Component:**
+**Import the default component and use it as Compound Component:**
 
 ```jsx
 import Grid from 'fluentui-react-grid';
