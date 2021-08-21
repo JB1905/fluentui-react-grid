@@ -4,4 +4,4 @@
 
 #### New Feature
 
-- added `Grid`, `Row` & `Col` components
+- added the `Grid`, `Row` & `Col` components
