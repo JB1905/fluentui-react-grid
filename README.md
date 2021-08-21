@@ -119,7 +119,7 @@ _By default grid order is `dir="ltr"` – (order from left to right). You can ch
 
 [HTML div element props](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) and dedicated params based on Fluent UI class names
 
-[Check corresponding Fulent UI class names here](https://developer.microsoft.com/en-us/fluentui#/styles/web/layout)
+[Check corresponding Fluent UI class names here](https://developer.microsoft.com/en-us/fluentui#/styles/web/layout)
 
 | Param           | Type                            |
 | --------------- | ------------------------------- |
