@@ -9,7 +9,7 @@ describe('Grid', () => {
     ${'ltr'}
     ${'rtl'}
     ${undefined}
-  `('should render grid with dir: $dir', ({ dir }) => {
+  `('should render the grid with dir: $dir', ({ dir }) => {
     const { container } = render(
       <Grid dir={dir}>
         <Row>
@@ -22,7 +22,7 @@ describe('Grid', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render grid with custom params', () => {
+  it('should render the grid with custom params', () => {
     const { container } = render(
       <CompoundGrid>
         <CompoundGrid.Row>
