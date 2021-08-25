@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grid should render grid with custom params 1`] = `
+exports[`Grid should render the grid with custom params 1`] = `
 <div>
   <div
     class="ms-Grid"
@@ -24,7 +24,7 @@ exports[`Grid should render grid with custom params 1`] = `
 </div>
 `;
 
-exports[`Grid should render grid with dir: ltr 1`] = `
+exports[`Grid should render the grid with dir: ltr 1`] = `
 <div>
   <div
     class="ms-Grid"
@@ -48,7 +48,7 @@ exports[`Grid should render grid with dir: ltr 1`] = `
 </div>
 `;
 
-exports[`Grid should render grid with dir: rtl 1`] = `
+exports[`Grid should render the grid with dir: rtl 1`] = `
 <div>
   <div
     class="ms-Grid"
@@ -72,7 +72,7 @@ exports[`Grid should render grid with dir: rtl 1`] = `
 </div>
 `;
 
-exports[`Grid should render grid with dir: undefined 1`] = `
+exports[`Grid should render the grid with dir: undefined 1`] = `
 <div>
   <div
     class="ms-Grid"
