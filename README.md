@@ -53,7 +53,7 @@ You also need to include CSS styles (in the HTML header section, e.g. in index.h
 
 ## Getting Started
 
-**Import the default component and use it as Compound Component:**
+**Import the default component and use it as a Compound Component:**
 
 ```jsx
 import Grid from 'fluentui-react-grid';
