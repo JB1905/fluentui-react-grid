@@ -71,4 +71,9 @@ describe('Grid', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it.todo('empty grid')
+  it.todo('only col')
+  it.todo('only row')
+  it.todo('incorrect nesting')
 });
