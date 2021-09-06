@@ -32,6 +32,8 @@
     "react",
     "microsoft",
     "components",
+    "library",
+    "ui",
     "grid",
     "layout",
     "row",
