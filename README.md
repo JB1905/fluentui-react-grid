@@ -121,40 +121,42 @@ _By default grid order is `dir="ltr"` – (order from left to right). You can ch
 
 [Check corresponding Fluent UI class names here](https://developer.microsoft.com/en-us/fluentui#/styles/web/layout)
 
-| Param           | Type                            |
-| --------------- | ------------------------------- |
-| `sizeSm`        | number or string (between 1-12) |
-| `sizeMd`        | number or string (between 1-12) |
-| `sizeLg`        | number or string (between 1-12) |
-| `sizeXl`        | number or string (between 1-12) |
-| `sizeXxl`       | number or string (between 1-12) |
-| `sizeXxxl`      | number or string (between 1-12) |
-| `smPush`        | number or string (between 1-12) |
-| `mdPush`        | number or string (between 1-12) |
-| `lgPush`        | number or string (between 1-12) |
-| `xlPush`        | number or string (between 1-12) |
-| `xxlPush`       | number or string (between 1-12) |
-| `xxxlPush`      | number or string (between 1-12) |
-| `smPull`        | number or string (between 1-12) |
-| `mdPull`        | number or string (between 1-12) |
-| `lgPull`        | number or string (between 1-12) |
-| `xlPull`        | number or string (between 1-12) |
-| `xxlPull`       | number or string (between 1-12) |
-| `xxxlPull`      | number or string (between 1-12) |
-| `hiddenSm`      | boolean                         |
-| `hiddenMd`      | boolean                         |
-| `hiddenMdDown`  | boolean                         |
-| `hiddenMdUp`    | boolean                         |
-| `hiddenLg`      | boolean                         |
-| `hiddenLgDown`  | boolean                         |
-| `hiddenLgUp`    | boolean                         |
-| `hiddenXl`      | boolean                         |
-| `hiddenXlDown`  | boolean                         |
-| `hiddenXlUp`    | boolean                         |
-| `hiddenXxl`     | boolean                         |
-| `hiddenXxlDown` | boolean                         |
-| `hiddenXxlUp`   | boolean                         |
-| `hiddenXxxl`    | boolean                         |
+<!-- TODO? extra columns -->
+
+| Name              | Type                            |
+| ----------------- | ------------------------------- |
+| **sizeSm**        | number or string (between 1-12) |
+| **sizeMd**        | number or string (between 1-12) |
+| **sizeLg**        | number or string (between 1-12) |
+| **sizeXl**        | number or string (between 1-12) |
+| **sizeXxl**       | number or string (between 1-12) |
+| **sizeXxxl**      | number or string (between 1-12) |
+| **smPush**        | number or string (between 1-12) |
+| **mdPush**        | number or string (between 1-12) |
+| **lgPush**        | number or string (between 1-12) |
+| **xlPush**        | number or string (between 1-12) |
+| **xxlPush**       | number or string (between 1-12) |
+| **xxxlPush**      | number or string (between 1-12) |
+| **smPull**        | number or string (between 1-12) |
+| **mdPull**        | number or string (between 1-12) |
+| **lgPull**        | number or string (between 1-12) |
+| **xlPull**        | number or string (between 1-12) |
+| **xxlPull**       | number or string (between 1-12) |
+| **xxxlPull**      | number or string (between 1-12) |
+| **hiddenSm**      | boolean                         |
+| **hiddenMd**      | boolean                         |
+| **hiddenMdDown**  | boolean                         |
+| **hiddenMdUp**    | boolean                         |
+| **hiddenLg**      | boolean                         |
+| **hiddenLgDown**  | boolean                         |
+| **hiddenLgUp**    | boolean                         |
+| **hiddenXl**      | boolean                         |
+| **hiddenXlDown**  | boolean                         |
+| **hiddenXlUp**    | boolean                         |
+| **hiddenXxl**     | boolean                         |
+| **hiddenXxlDown** | boolean                         |
+| **hiddenXxlUp**   | boolean                         |
+| **hiddenXxxl**    | boolean                         |
 
 ## Example
 

@@ -1,8 +1,12 @@
-import { Grid, GridProps } from './components/Grid';
-import { Row, RowProps } from './components/Row';
-import { Col, ColProps } from './components/Col';
+import { Grid } from './components/Grid';
+import { Row } from './components/Row';
+import { Col } from './components/Col';
 
-export { Grid, GridProps, Row, RowProps, Col, ColProps };
+export { Grid, Row, Col };
+
+export type { GridProps } from './components/Grid';
+export type { RowProps } from './components/Row';
+export type { ColProps } from './components/Col';
 
 const CompoundGrid = Grid as typeof Grid & {
   Row: typeof Row;

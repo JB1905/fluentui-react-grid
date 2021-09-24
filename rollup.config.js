@@ -1,7 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 import pkg from './package.json';
 
@@ -11,7 +10,7 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
-      exports: 'named',
+      exports: 'named', // TODO
       sourcemap: true,
     },
     {
@@ -20,7 +19,9 @@ export default {
       sourcemap: true,
     },
   ],
-  plugins: [resolve(), peerDepsExternal(), typescript(), terser()],
+  plugins: [resolve(), typescript(), terser()],
+  // TODO
+  // TODO || => ??
   external: [
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {}),
