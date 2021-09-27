@@ -121,8 +121,6 @@ _By default grid order is `dir="ltr"` – (order from left to right). You can ch
 
 [Check corresponding Fluent UI class names here](https://developer.microsoft.com/en-us/fluentui#/styles/web/layout)
 
-<!-- TODO? extra columns -->
-
 | Name              | Type                            |
 | ----------------- | ------------------------------- |
 | **sizeSm**        | number or string (between 1-12) |
