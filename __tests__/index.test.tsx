@@ -4,23 +4,21 @@ import { render } from '@testing-library/react';
 import CompoundGrid, { Grid, Row, Col } from '../src';
 
 describe('Grid', () => {
-  it.each`
-    dir
-    ${'ltr'}
-    ${'rtl'}
-    ${undefined}
-  `('should render the grid with dir: $dir', ({ dir }) => {
-    const { container } = render(
-      <Grid dir={dir}>
-        <Row>
-          <Col>Hello</Col>
-          <Col>World</Col>
-        </Row>
-      </Grid>
-    );
+  it.each(['ltr', 'rtl', undefined])(
+    'should render the grid with dir: $dir',
+    (dir) => {
+      const { container } = render(
+        <Grid dir={dir}>
+          <Row>
+            <Col>Hello</Col>
+            <Col>World</Col>
+          </Row>
+        </Grid>
+      );
 
-    expect(container).toMatchSnapshot();
-  });
+      expect(container).toMatchSnapshot();
+    }
+  );
 
   it('should render the grid with custom params', () => {
     const { container } = render(
@@ -71,4 +69,6 @@ describe('Grid', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  // TODO add unit tests for Col and Row
 });
