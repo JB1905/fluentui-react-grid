@@ -69,6 +69,4 @@ describe('Grid', () => {
 
     expect(container).toMatchSnapshot();
   });
-
-  // TODO add unit tests for Col and Row
 });
