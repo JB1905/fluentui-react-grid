@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import CompoundGrid, { Grid, Row, Col } from '../src';
+import CompoundGrid, { Grid, Row, Col, GridProps } from '../src';
 
 describe('Grid', () => {
-  it.each(['ltr', 'rtl', undefined])(
+  it.each(['ltr', 'rtl', undefined] as GridProps['dir'][])(
     'should render the grid with dir: $dir',
     (dir) => {
       const { container } = render(
