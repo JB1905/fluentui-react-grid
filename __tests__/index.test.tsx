@@ -5,7 +5,7 @@ import CompoundGrid, { Grid, Row, Col, GridProps } from '../src';
 
 describe('Grid', () => {
   it.each(['ltr', 'rtl', undefined] as GridProps['dir'][])(
-    'should render the grid with dir: $dir',
+    'should render the grid with dir: %s',
     (dir) => {
       const { container } = render(
         <Grid dir={dir}>
