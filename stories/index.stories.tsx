@@ -4,7 +4,7 @@ import { styled } from '@storybook/theming';
 
 import CompoundGrid, { Grid, Row, Col } from '../src';
 
-import { dirs } from '../src/constants/dirs';
+import { dirs } from '../src/constants';
 
 import type { Dir } from '../src/types';
 
