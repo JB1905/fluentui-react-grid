@@ -1,11 +1,13 @@
-import React, { HTMLProps } from 'react';
+import React, { forwardRef, HTMLProps } from 'react';
 import clsx from 'clsx';
 
 export type NumericSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 export type Size = NumericSize | `${NumericSize}`;
 
-export interface ColProps extends HTMLProps<HTMLDivElement> {
+type Element = HTMLDivElement;
+
+export interface ColProps extends HTMLProps<Element> {
   readonly sizeSm?: Size;
   readonly sizeMd?: Size;
   readonly sizeLg?: Size;
@@ -43,92 +45,98 @@ export interface ColProps extends HTMLProps<HTMLDivElement> {
   readonly hiddenXxxl?: boolean;
 }
 
-export const Col = ({
-  children,
-  className,
+export const Col = forwardRef<Element, ColProps>(
+  (
+    {
+      children,
+      className,
 
-  sizeSm,
-  sizeMd,
-  sizeLg,
-  sizeXl,
-  sizeXxl,
-  sizeXxxl,
+      sizeSm,
+      sizeMd,
+      sizeLg,
+      sizeXl,
+      sizeXxl,
+      sizeXxxl,
 
-  smPush,
-  mdPush,
-  lgPush,
-  xlPush,
-  xxlPush,
-  xxxlPush,
+      smPush,
+      mdPush,
+      lgPush,
+      xlPush,
+      xxlPush,
+      xxxlPush,
 
-  smPull,
-  mdPull,
-  lgPull,
-  xlPull,
-  xxlPull,
-  xxxlPull,
+      smPull,
+      mdPull,
+      lgPull,
+      xlPull,
+      xxlPull,
+      xxxlPull,
 
-  hiddenSm,
-  hiddenMd,
-  hiddenMdDown,
-  hiddenMdUp,
-  hiddenLg,
-  hiddenLgDown,
-  hiddenLgUp,
-  hiddenXl,
-  hiddenXlDown,
-  hiddenXlUp,
-  hiddenXxl,
-  hiddenXxlDown,
-  hiddenXxlUp,
-  hiddenXxxl,
+      hiddenSm,
+      hiddenMd,
+      hiddenMdDown,
+      hiddenMdUp,
+      hiddenLg,
+      hiddenLgDown,
+      hiddenLgUp,
+      hiddenXl,
+      hiddenXlDown,
+      hiddenXlUp,
+      hiddenXxl,
+      hiddenXxlDown,
+      hiddenXxlUp,
+      hiddenXxxl,
 
-  ...props
-}: ColProps) => (
-  <div
-    className={clsx(
-      'ms-Grid-col',
+      ...props
+    },
+    ref
+  ) => (
+    <div
+      className={clsx(
+        'ms-Grid-col',
 
-      sizeSm && `ms-sm${sizeSm}`,
-      sizeMd && `ms-md${sizeMd}`,
-      sizeLg && `ms-lg${sizeLg}`,
-      sizeXl && `ms-xl${sizeXl}`,
-      sizeXxl && `ms-xxl${sizeXxl}`,
-      sizeXxxl && `ms-xxl${sizeXxxl}`,
+        sizeSm && `ms-sm${sizeSm}`,
+        sizeMd && `ms-md${sizeMd}`,
+        sizeLg && `ms-lg${sizeLg}`,
+        sizeXl && `ms-xl${sizeXl}`,
+        sizeXxl && `ms-xxl${sizeXxl}`,
+        sizeXxxl && `ms-xxl${sizeXxxl}`,
 
-      smPush && `ms-sm${smPush}`,
-      mdPush && `ms-md${mdPush}`,
-      lgPush && `ms-lg${lgPush}`,
-      xlPush && `ms-xl${xlPush}`,
-      xxlPush && `ms-xxl${xxlPush}`,
-      xxxlPush && `ms-xxl${xxxlPush}`,
+        smPush && `ms-sm${smPush}`,
+        mdPush && `ms-md${mdPush}`,
+        lgPush && `ms-lg${lgPush}`,
+        xlPush && `ms-xl${xlPush}`,
+        xxlPush && `ms-xxl${xxlPush}`,
+        xxxlPush && `ms-xxl${xxxlPush}`,
 
-      smPull && `ms-sm${smPull}`,
-      mdPull && `ms-md${mdPull}`,
-      lgPull && `ms-lg${lgPull}`,
-      xlPull && `ms-xl${xlPull}`,
-      xxlPull && `ms-xxl${xxlPull}`,
-      xxxlPull && `ms-xxl${xxxlPull}`,
+        smPull && `ms-sm${smPull}`,
+        mdPull && `ms-md${mdPull}`,
+        lgPull && `ms-lg${lgPull}`,
+        xlPull && `ms-xl${xlPull}`,
+        xxlPull && `ms-xxl${xxlPull}`,
+        xxxlPull && `ms-xxl${xxxlPull}`,
 
-      hiddenSm && 'ms-hiddenSm',
-      hiddenMd && 'ms-hiddenMd',
-      hiddenMdDown && 'ms-hiddenMdDown',
-      hiddenMdUp && 'ms-hiddenMdUp',
-      hiddenLg && 'ms-hiddenLg',
-      hiddenLgDown && 'ms-hiddenLgDown',
-      hiddenLgUp && 'ms-hiddenLgUp',
-      hiddenXl && 'ms-hiddenXl',
-      hiddenXlDown && 'ms-hiddenXlDown',
-      hiddenXlUp && 'ms-hiddenXlUp',
-      hiddenXxl && 'ms-hiddenXxl',
-      hiddenXxlDown && 'ms-hiddenXxlDown',
-      hiddenXxlUp && 'ms-hiddenXxlUp',
-      hiddenXxxl && 'ms-hiddenXxxl',
+        hiddenSm && 'ms-hiddenSm',
+        hiddenMd && 'ms-hiddenMd',
+        hiddenMdDown && 'ms-hiddenMdDown',
+        hiddenMdUp && 'ms-hiddenMdUp',
+        hiddenLg && 'ms-hiddenLg',
+        hiddenLgDown && 'ms-hiddenLgDown',
+        hiddenLgUp && 'ms-hiddenLgUp',
+        hiddenXl && 'ms-hiddenXl',
+        hiddenXlDown && 'ms-hiddenXlDown',
+        hiddenXlUp && 'ms-hiddenXlUp',
+        hiddenXxl && 'ms-hiddenXxl',
+        hiddenXxlDown && 'ms-hiddenXxlDown',
+        hiddenXxlUp && 'ms-hiddenXxlUp',
+        hiddenXxxl && 'ms-hiddenXxxl',
 
-      className
-    )}
-    {...props}
-  >
-    {children}
-  </div>
+        className
+      )}
+      {...props}
+      ref={ref}
+    >
+      {children}
+    </div>
+  )
 );

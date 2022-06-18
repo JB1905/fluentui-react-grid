@@ -4,6 +4,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
+    'plugin:storybook/recommended',
   ],
   plugins: ['prettier'],
   env: {
